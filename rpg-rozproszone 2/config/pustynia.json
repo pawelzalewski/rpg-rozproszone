@@ -1,0 +1,71 @@
+{
+  "id": "pustynia",
+  "numer": 4,
+  "nazwa": "Szkarłatna Pustynia",
+  "opis": "Morze czerwonego piasku, gdzie ruiny dawnych oaz wystają spod wydm jak kości olbrzyma. Szlak prowadzi ku Borowi Cieni, Mokradłom Zapomnienia oraz Czarnej Cytadeli.",
+  "sasiedzi": ["bor", "mokradla", "cytadela"],
+  "przedmioty": [
+    {
+      "id": "sejmitar-fatamorgany",
+      "nazwa": "Sejmitar Fatamorgany",
+      "opis": "Jednoręczna, lekka szabla, której ostrze drży jak powietrze nad rozgrzanym piaskiem.",
+      "typ": "bron",
+      "podtyp": "miecz",
+      "rece": 1,
+      "bonus_ataku": 9,
+      "bonus_obrony": 1
+    },
+    {
+      "id": "buklak-zycia",
+      "nazwa": "Bukłak Życia",
+      "opis": "Chłodna woda z ukrytej oazy. Leczy 45 HP.",
+      "typ": "mikstura",
+      "podtyp": "leczenie",
+      "rece": 0,
+      "bonus_ataku": 0,
+      "bonus_obrony": 0,
+      "leczenie": 45,
+      "zuzywalny": true
+    },
+    {
+      "id": "jad-skorpiona",
+      "nazwa": "Jad Skorpiona",
+      "opis": "Trujący eliksir bojowy. Nie zajmuje rąk.",
+      "typ": "artefakt",
+      "podtyp": "trofeum",
+      "rece": 0,
+      "bonus_ataku": 3,
+      "bonus_obrony": 0,
+      "ukryty": true,
+      "strzezony": false
+    },
+    {
+      "id": "pieczec-smoka",
+      "nazwa": "Pieczęć Smoka",
+      "opis": "Dowód pokonania Piaskowego Smoka. Otwiera drogę do Króla Licza.",
+      "typ": "artefakt",
+      "podtyp": "klucz",
+      "rece": 0,
+      "bonus_ataku": 0,
+      "bonus_obrony": 0,
+      "ukryty": true,
+      "strzezony": false
+    },
+    {
+      "id": "ostrze-smoka",
+      "nazwa": "Ostrze Smoka",
+      "opis": "Jednoręczna broń z łuski Piaskowego Smoka.",
+      "typ": "bron",
+      "podtyp": "miecz",
+      "rece": 1,
+      "bonus_ataku": 12,
+      "bonus_obrony": 2,
+      "ukryty": true,
+      "strzezony": false
+    }
+  ],
+  "potwory": [
+    { "id": "skorpion-krol", "nazwa": "Skorpion Król", "hp": 70, "atak": 12, "boss": true, "loot": ["jad-skorpiona"] },
+    { "id": "piaskowy-smok", "nazwa": "Piaskowy Smok", "hp": 180, "atak": 22, "boss": true, "loot": ["pieczec-smoka", "ostrze-smoka"] }
+  ]
+}

@@ -1,0 +1,80 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3.13-management
+    container_name: rpg-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+
+  bor:
+    build: .
+    container_name: rpg-bor
+    environment:
+      - KRAINA=bor
+      - RABBIT_HOST=rabbitmq
+      - SEKRET_SERWEROW=tajny-sekret-krain
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  turnie:
+    build: .
+    container_name: rpg-turnie
+    environment:
+      - KRAINA=turnie
+      - RABBIT_HOST=rabbitmq
+      - SEKRET_SERWEROW=tajny-sekret-krain
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  mokradla:
+    build: .
+    container_name: rpg-mokradla
+    environment:
+      - KRAINA=mokradla
+      - RABBIT_HOST=rabbitmq
+      - SEKRET_SERWEROW=tajny-sekret-krain
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  pustynia:
+    build: .
+    container_name: rpg-pustynia
+    environment:
+      - KRAINA=pustynia
+      - RABBIT_HOST=rabbitmq
+      - SEKRET_SERWEROW=tajny-sekret-krain
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  cytadela:
+    build: .
+    container_name: rpg-cytadela
+    environment:
+      - KRAINA=cytadela
+      - RABBIT_HOST=rabbitmq
+      - SEKRET_SERWEROW=tajny-sekret-krain
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  klient:
+    build: .
+    profiles: ["narzedzia"]
+    stdin_open: true
+    tty: true
+    environment:
+      - RABBIT_HOST=rabbitmq
+    command: ["python", "-m", "klient.main", "--host", "rabbitmq"]
+    depends_on:
+      rabbitmq:
+        condition: service_healthy

@@ -1,0 +1,54 @@
+{
+  "id": "mokradla",
+  "numer": 3,
+  "nazwa": "Mokradła Zapomnienia",
+  "opis": "Parujące bagna, nad którymi unosi się mgła odbierająca wspomnienia. Grobla na północy wiedzie do Boru Cieni, a kamienista perć na wschodzie wspina się ku Zamarzniętym Turniom.",
+  "sasiedzi": ["bor", "turnie", "pustynia", "cytadela"],
+  "przedmioty": [
+    {
+      "id": "kostur-bagien",
+      "nazwa": "Kostur Bagien",
+      "opis": "Dwuręczny, sękaty kostur nasiąknięty mocą mokradeł.",
+      "typ": "bron",
+      "podtyp": "kostur",
+      "rece": 2,
+      "bonus_ataku": 7,
+      "bonus_obrony": 2
+    },
+    {
+      "id": "amulet-mgly",
+      "nazwa": "Amulet Mgły",
+      "opis": "Amulet skrywający noszącego w oparach mgły. Nie zajmuje rąk.",
+      "typ": "artefakt",
+      "podtyp": "amulet",
+      "rece": 0,
+      "bonus_ataku": 2,
+      "bonus_obrony": 3
+    },
+    {
+      "id": "wywar-bagienny",
+      "nazwa": "Wywar Bagienny",
+      "opis": "Gęsty, zielony wywar regenerujący 40 HP. Pachnie fatalnie, działa świetnie.",
+      "typ": "mikstura",
+      "podtyp": "leczenie",
+      "rece": 0,
+      "bonus_ataku": 0,
+      "bonus_obrony": 0,
+      "leczenie": 40,
+      "zuzywalny": true
+    },
+    {
+      "id": "perla-utopca",
+      "nazwa": "Perła Utopca",
+      "opis": "Bagienna perła wzmacniająca obronę.",
+      "typ": "artefakt",
+      "podtyp": "amulet",
+      "rece": 0,
+      "bonus_ataku": 0,
+      "bonus_obrony": 2,
+      "ukryty": true,
+      "strzezony": false
+    }
+  ],
+  "potwory": [{ "id": "utopiec", "nazwa": "Utopiec", "hp": 25, "atak": 5, "loot": ["perla-utopca"] }]
+}

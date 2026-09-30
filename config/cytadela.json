@@ -1,0 +1,47 @@
+{
+  "id": "cytadela",
+  "numer": 5,
+  "nazwa": "Czarna Cytadela",
+  "opis": "Bazaltowa twierdza zawieszona nad przepaścią. W sali tronowej płonie zimny ogień, a każdy korytarz niesie echo kroków dawno zmarłych królów.",
+  "sasiedzi": ["turnie", "mokradla", "pustynia"],
+  "przedmioty": [
+    {
+      "id": "mlot-tytanow",
+      "nazwa": "Młot Tytanów",
+      "opis": "Potężna broń dwuręczna. Uderza wolno, ale z siłą oblężniczego tarana.",
+      "typ": "bron",
+      "podtyp": "mlot",
+      "rece": 2,
+      "bonus_ataku": 14,
+      "bonus_obrony": 0
+    },
+    {
+      "id": "eliksir-niesmiertelnika",
+      "nazwa": "Eliksir Nieśmiertelnika",
+      "opis": "Legendarna mikstura z alchemicznego skarbca Cytadeli. Leczy 70 HP.",
+      "typ": "mikstura",
+      "podtyp": "leczenie",
+      "rece": 0,
+      "bonus_ataku": 0,
+      "bonus_obrony": 0,
+      "leczenie": 70,
+      "zuzywalny": true
+    },
+    {
+      "id": "helm-cytadeli",
+      "nazwa": "Hełm Cytadeli",
+      "opis": "Ciężki hełm po strażniku. Nie zajmuje rąk.",
+      "typ": "artefakt",
+      "podtyp": "pancerz",
+      "rece": 0,
+      "bonus_ataku": 0,
+      "bonus_obrony": 5,
+      "ukryty": true,
+      "strzezony": false
+    }
+  ],
+  "potwory": [
+    { "id": "strażnik-cytadeli", "nazwa": "Strażnik Cytadeli", "hp": 95, "atak": 15, "boss": true, "loot": ["helm-cytadeli"] },
+    { "id": "krol-licz", "nazwa": "Król Licz", "hp": 260, "atak": 28, "boss": true, "final_boss": true, "wymagany_przedmiot": "pieczec-smoka" }
+  ]
+}

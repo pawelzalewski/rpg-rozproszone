@@ -1,0 +1,66 @@
+{
+  "id": "bor",
+  "numer": 1,
+  "nazwa": "Bór Cieni",
+  "opis": "Gęsty, odwieczny las, w którym światło dnia nigdy nie sięga ściółki. Między pniami snują się cienie, a ścieżki prowadzą na wschód ku Zamarzniętym Turniom i na południe ku Mokradłom Zapomnienia.",
+  "sasiedzi": ["turnie", "mokradla", "pustynia"],
+  "przedmioty": [
+    {
+      "id": "miecz-cieni",
+      "nazwa": "Miecz Cieni",
+      "opis": "Jednoręczne ostrze wykute z mroku pod najstarszym dębem boru.",
+      "typ": "bron",
+      "podtyp": "miecz",
+      "rece": 1,
+      "bonus_ataku": 5,
+      "bonus_obrony": 0
+    },
+    {
+      "id": "tarcza-debowa",
+      "nazwa": "Tarcza Dębowa",
+      "opis": "Ciężka, jednoręczna tarcza z serca prastarego dębu.",
+      "typ": "tarcza",
+      "podtyp": "tarcza",
+      "rece": 1,
+      "bonus_ataku": 0,
+      "bonus_obrony": 4
+    },
+    {
+      "id": "eliksir-wilczy",
+      "nazwa": "Eliksir Wilczej Krwi",
+      "opis": "Gorzki wywar dodający dzikiej siły. Nie zajmuje rąk — działa jak trofeum bojowe.",
+      "typ": "artefakt",
+      "podtyp": "trofeum",
+      "rece": 0,
+      "bonus_ataku": 2,
+      "bonus_obrony": 0
+    },
+    {
+      "id": "mikstura-leczenia",
+      "nazwa": "Mikstura Leczenia",
+      "opis": "Rubinowa mikstura przywracająca 35 punktów życia.",
+      "typ": "mikstura",
+      "podtyp": "leczenie",
+      "rece": 0,
+      "bonus_ataku": 0,
+      "bonus_obrony": 0,
+      "leczenie": 35,
+      "zuzywalny": true
+    },
+    {
+      "id": "pazur-wilka",
+      "nazwa": "Pazur Wilka",
+      "opis": "Trofeum po wilku. Nie zajmuje rąk i lekko wzmacnia atak.",
+      "typ": "artefakt",
+      "podtyp": "trofeum",
+      "rece": 0,
+      "bonus_ataku": 1,
+      "bonus_obrony": 0,
+      "ukryty": true,
+      "strzezony": false
+    }
+  ],
+  "potwory": [
+    { "id": "wilk-boru", "nazwa": "Wilk z Boru", "hp": 30, "atak": 4, "loot": ["pazur-wilka"] }
+  ]
+}

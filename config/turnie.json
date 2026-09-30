@@ -1,0 +1,58 @@
+{
+  "id": "turnie",
+  "numer": 2,
+  "nazwa": "Zamarznięte Turnie",
+  "opis": "Ośnieżone granie, po których hula lodowaty wiatr. W dole, za przełęczą, ciemnieje Bór Cieni, a mgliste zejście na południu prowadzi na Mokradła Zapomnienia.",
+  "sasiedzi": ["bor", "mokradla", "cytadela"],
+  "przedmioty": [
+    {
+      "id": "topor-lodu",
+      "nazwa": "Topór Lodu",
+      "opis": "Dwuręczny topór o ostrzu z wiecznego lodu, zimny nawet w ogniu.",
+      "typ": "bron",
+      "podtyp": "topor",
+      "rece": 2,
+      "bonus_ataku": 8,
+      "bonus_obrony": 0
+    },
+    {
+      "id": "rog-turni",
+      "nazwa": "Róg Turni",
+      "opis": "Róg bojowy, którego echo niesie się między szczytami. Nie zajmuje rąk.",
+      "typ": "artefakt",
+      "podtyp": "instrument",
+      "rece": 0,
+      "bonus_ataku": 3,
+      "bonus_obrony": 1
+    },
+    {
+      "id": "nalewka-mrozu",
+      "nazwa": "Nalewka Mrozu",
+      "opis": "Błękitna mikstura ogrzewająca od środka i lecząca 30 HP.",
+      "typ": "mikstura",
+      "podtyp": "leczenie",
+      "rece": 0,
+      "bonus_ataku": 0,
+      "bonus_obrony": 0,
+      "leczenie": 30,
+      "zuzywalny": true
+    },
+    {
+      "id": "serce-golema",
+      "nazwa": "Serce Golema",
+      "opis": "Lodowy rdzeń, który można wypić jak mocną miksturę. Leczy 45 HP.",
+      "typ": "mikstura",
+      "podtyp": "leczenie",
+      "rece": 0,
+      "bonus_ataku": 0,
+      "bonus_obrony": 0,
+      "leczenie": 45,
+      "zuzywalny": true,
+      "ukryty": true,
+      "strzezony": false
+    }
+  ],
+  "potwory": [
+    { "id": "lodowy-golem", "nazwa": "Lodowy Golem", "hp": 45, "atak": 6, "loot": ["serce-golema"] }
+  ]
+}
